@@ -29,9 +29,32 @@ def PSDplot(frequency, PSD, label):
     ax.xaxis.set_major_formatter(mticker.ScalarFormatter())
     plt.legend()
     plt.show()
-    
-frequency = [1, 4, 100, 200]
-PSD = [0.0001, 0.01, 0.01, 0.001]
+
+frequency = []
+PSD = []
+while True:
+    type_frequency = input('Please type in frequency. Type "end" if finished ')
+    if type_frequency == 'end':
+        break
+    else:
+        frequency.append(type_frequency)
+for i in range(len(frequency)):
+    frequency[i] = float(frequency[i])
+print(frequency)
+        
+while True:
+    type_PSD = input('Please type in PSD. Type "end" if finished ')
+    if type_PSD == 'end':
+        break
+    else:
+        PSD.append(type_PSD)  
+
+for i in range(len(PSD)):
+    PSD[i] = float(PSD[i])        
+
+print(PSD)
+# frequency = [1, 4, 100, 200]
+# PSD = [0.0001, 0.01, 0.01, 0.001]
 label = 'Vib Event 1'
 
 area = []
